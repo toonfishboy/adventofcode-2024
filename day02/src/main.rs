@@ -83,8 +83,8 @@ fn main() {
 
 fn read_file(path: &str) -> Vec<Vec<i64>> {
     let content = fs::read_to_string(path).expect("Failed to read file");
-    let mut result: Vec<Vec<i64>> = vec![];
     let lines: Vec<String> = content.split("\n").map(|x| x.to_owned()).collect();
+    let mut result: Vec<Vec<i64>> = vec![];
 
     for line in lines {
         let numbers = line
