@@ -46,5 +46,5 @@ fn main() {
 
 fn read_file(path: &str) -> Vec<String> {
     let content = fs::read_to_string(path).expect("Failed to read file");
-    content.split("\n").map(|x| x.to_owned()).collect()
+    content.trim().split("\n").map(|x| x.to_owned()).collect()
 }
